@@ -1,5 +1,5 @@
 # Based on https://github.com/weldpua2008/docker-net-snmp
-FROM telegraf
+FROM telegraf:latest
 
 RUN export  DEBIAN_FRONTEND=noninteractive && \
      export DEBIAN_RELEASE=$(awk -F'[" ]' '/VERSION=/{print $3}'  /etc/os-release | tr -cd '[[:alnum:]]._-' ) && \
@@ -14,6 +14,6 @@ RUN export  DEBIAN_FRONTEND=noninteractive && \
      echo "deb http://security.debian.org ${DEBIAN_RELEASE}/updates main contrib non-free"  >> /etc/apt/sources.list && \
     set -x &&\
     apt-get update && \
-    apt-get -y install snmp snmpd snmp-mibs-downloader ipmitool && \
+    apt-get -y --no-install-recommends install snmpd snmp-mibs-downloader ipmitool && \
     rm -r /var/lib/apt/lists/*
     
