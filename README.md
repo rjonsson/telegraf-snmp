@@ -1,8 +1,7 @@
-# Telegraf Docker Image with Net-SNMP
+# Telegraf Docker Image with Net-SNMP & ipmitool
 
-Telegraf is an agent for collecting metrics and writing them to InfluxDB or other outputs. The reason why I created this repository ([Docker Hub link](https://hub.docker.com/r/nuntz/telegraf-snmp/)) is that the official one does not include the SNMP tools, necessary for the `input.snmp` input plugin.
+Just added to nuntz work for my own preference
 
 Based on:
+* https://github.com/nuntz/telegraf-snmp
 
-* https://github.com/influxdata/influxdata-docker
-* https://github.com/weldpua2008/docker-net-snmp
