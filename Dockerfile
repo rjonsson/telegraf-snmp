@@ -14,6 +14,6 @@ RUN export  DEBIAN_FRONTEND=noninteractive && \
      echo "deb http://security.debian.org ${DEBIAN_RELEASE}/updates main contrib non-free"  >> /etc/apt/sources.list && \
     set -x &&\
     apt-get update && \
-    apt-get -y --no-install-recommends install snmpd snmp-mibs-downloader ipmitool && \
+    apt-get -y install snmp-mibs-downloader ipmitool && \
     rm -r /var/lib/apt/lists/*
     
